@@ -7,12 +7,21 @@ Date        2018.08.29
 
 import random
 
-baseball_count = int(input("Enter Number(3 ~ 9): "))
-
 def is_digit(user_input_number): #문자열 값을 입력받아 정수로 변환 가능할 경우에는 True, 그렇지 않다면 False로 변환해줌
     result = user_input_number.isdigit()
     return result
 
+baseball_count = 0
+while True:
+    inp = input("Enter Number(3 ~ 9): ") #자리수를 입력받아, 사용이 가능한지 (정수인지, 3~9 범위에 있는지) 검증함.
+    if is_digit(inp) == False:
+        print("Wrong Input, Input again")
+    else:
+        if int(inp) > 9 or int(inp) < 3:
+            print("Wrong Input, Input again")
+        else:
+            baseball_count = int(inp)
+            break
 
 def is_vaildated_number(user_input_number): #10^n-1 ~ (10^n)-1 범위의 숫자를 입력하였는가?
     result = None
@@ -100,10 +109,10 @@ def main():
     while True:
         find = 0
         random_number = str(get_not_duplicated_three_digit_number()) #중복되지 않는 random number 출력
-        print(random_number)
+        print("random number: " + random_number)
         guess = 1
         print("guess random number!")
-        while True :
+        while True:
             user_input = input("Guess #"+ str(guess) + " : ") #0이 입력되거나 (바로 Game 끝)
 
             if str(user_input) == "0":
