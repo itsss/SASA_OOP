@@ -2,7 +2,7 @@
 """
 Title       Baseball Game (n자리 대응용: 3~9자리까지 가능)
 Author      ITSC (Taewon Kang)
-Date        2018.08.27
+Date        2018.08.29
 """
 
 import random
