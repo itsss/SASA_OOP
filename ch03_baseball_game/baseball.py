@@ -2,7 +2,7 @@
 """
 Title       Baseball Game
 Author      ITSC (Taewon Kang)
-Date        2018.08.27
+Date        2018.08.29
 """
 
 import random
