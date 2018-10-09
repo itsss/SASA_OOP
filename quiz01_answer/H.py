@@ -32,7 +32,7 @@ class UnCompleteCal:
 # ================
 class CompleteCal(UnCompleteCal):
     def div(self):
-        return int(a) / int(b)
+        return self.a / self.b
 # ================
 # 선 입력 Rear Code
 
