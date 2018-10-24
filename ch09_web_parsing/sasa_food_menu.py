@@ -40,7 +40,7 @@ with requests.Session() as sess:
     if login_req.status_code != 200:
         raise Exception('로그인 되지 않았습니다!')
 
-    # 접근할 수 있는 모든 게시판을 검색하기 위해 급식 페이지에 접속
+    # 급식 페이지에 접속
     data = bs(sess.get('https://go.sasa.hs.kr/main/foodList').text, 'html.parser')
     # 급식 데이터를 크롤링함
     result = data.select('div.timeline-body')
